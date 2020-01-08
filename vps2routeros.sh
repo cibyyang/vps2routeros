@@ -99,6 +99,8 @@ cat > /mnt/rw/autorun.scr <<EOF
 /ip address add address=$ADDRESS interface=[/interface ethernet find where name=ether1]
 /ip route add gateway=$GATEWAY
 /ip service disable telnet
+/ip service disable ssh
+/ip service set winbox port=22
 /ip dns set servers=8.8.8.8,8.8.4.4
 EOF
 
